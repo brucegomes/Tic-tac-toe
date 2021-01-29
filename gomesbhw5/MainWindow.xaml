@@ -1,0 +1,64 @@
+﻿<Window x:Class="gomesbhw5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:gomesbhw5"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="401.287" Width="314.394" ResizeMode="NoResize" Background="#FFEE2323">
+    <Window.Resources>
+        <Color x:Key="Color1">#FF362525</Color>
+    </Window.Resources>
+    <Grid Margin="0,0,0,-3" Background="#FFC17C7C" Height="375" VerticalAlignment="Top">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="118*"/>
+            <RowDefinition Height="7*"/>
+        </Grid.RowDefinitions>
+        <Menu x:Name="menuStrip" HorizontalAlignment="Left" Height="19" VerticalAlignment="Top" Width="91" Foreground="#FF020202" FontWeight="Bold" FontStyle="Italic" Background="#FFE2C1C1">
+            <MenuItem x:Name="menuFile" Header="Game" Click="menuFile_Click">
+                <MenuItem x:Name="menuToss" Header="Coin Toss" HorizontalAlignment="Left" Width="140"/>
+                <MenuItem x:Name="resetMenu" Header="Reset" HorizontalAlignment="Left" Width="142"/>
+                <MenuItem x:Name="menuExit" Header="Exit" HorizontalAlignment="Left" Width="140" Click="menuExit_Click"/>
+            </MenuItem>
+            <MenuItem x:Name="menuHelp" Header="Help">
+                <MenuItem x:Name="menuRules" Header="Rules" HorizontalAlignment="Left" Width="140" Click="menuRules_Click"/>
+                <MenuItem x:Name="menuAboutMe" Header="About" HorizontalAlignment="Left" Width="140" Click="menuAboutMe_Click"/>
+            </MenuItem>
+        </Menu>
+        <Button x:Name="resetBtn" Content="Reset" Margin="10,323,215,0" VerticalAlignment="Top" Background="#FFF0C5C5" FontWeight="Bold" Height="23" Click="resetBtn_Click" OpacityMask="#FFDE8585" RenderTransformOrigin="0.476,0.524"/>
+        <Button x:Name="tossBtn" Content="CoinToss" HorizontalAlignment="Left" Margin="10,293,0,0" VerticalAlignment="Top" Width="75" Background="#FFF1C1C1" FontWeight="Bold" Height="25" Click="tossBtn_Click"/>
+        <GroupBox x:Name="groupBox" Header="Playing Mode" HorizontalAlignment="Left" Height="65" Margin="114,284,0,0" VerticalAlignment="Top" Width="178" FontWeight="Bold" FontStyle="Italic">
+            <Grid x:Name="groupBoxGrid" HorizontalAlignment="Left" Height="47" Margin="-6,1,-2,-5" VerticalAlignment="Top" Width="174">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="115*"/>
+                    <ColumnDefinition Width="43*"/>
+                    <ColumnDefinition Width="16*"/>
+                </Grid.ColumnDefinitions>
+                <RadioButton x:Name="humanRadioBtn" Content="2 Players" HorizontalAlignment="Left" Margin="5,13,0,0" VerticalAlignment="Top" FontWeight="Bold" Checked="humanRadioBtn_Checked"/>
+                <RadioButton x:Name="cpuRadioBtn" Content="Against CPU" HorizontalAlignment="Left" Margin="80,13,0,0" VerticalAlignment="Top" FontWeight="Bold" Grid.ColumnSpan="3" Checked="cpuRadioBtn_Checked" Width="91"/>
+            </Grid>
+        </GroupBox>
+        <Label x:Name="statusLabel" Content="Welcome -- Toss a coin to start" Height="27" Margin="10,24,0,0" VerticalAlignment="Top" Width="279" FontSize="17" FontFamily="Viner Hand ITC" FontStyle="Italic" Foreground="#FFE01919" Background="#FFEEB4B4" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" HorizontalAlignment="Left" FontWeight="Bold">
+            <Label.Effect>
+                <DropShadowEffect/>
+            </Label.Effect>
+        </Label>
+        <Canvas x:Name="mainCanvas" HorizontalAlignment="Left" Height="218" Margin="10,61,0,0" VerticalAlignment="Top" Width="279" Background="#FFA64B4B">
+            <Rectangle x:Name="a1" Height="65" Stroke="Black" Width="85" MouseLeftButtonDown="a1_MouseLeftButtonDown">
+                <Rectangle.Fill>
+                    <SolidColorBrush Color="{DynamicResource Color1}"/>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="c1" Fill="#FF362525" Height="65" Stroke="Black" Width="85" Canvas.Top="153" MouseLeftButtonDown="c1_MouseLeftButtonDown"/>
+            <Rectangle x:Name="b1" Fill="#FF362525" Height="65" Stroke="Black" Width="85" Canvas.Top="77" MouseLeftButtonDown="b1_MouseLeftButtonDown"/>
+            <Rectangle x:Name="c3" Fill="#FF362525" Height="65" Stroke="Black" Width="85" Canvas.Left="194" Canvas.Top="153" MouseLeftButtonDown="c3_MouseLeftButtonDown"/>
+            <Rectangle x:Name="a3" Fill="#FF362525" Height="65" Stroke="Black" Width="85" Canvas.Left="194" MouseLeftButtonDown="a3_MouseLeftButtonDown"/>
+            <Rectangle x:Name="b3" Fill="#FF362525" Height="65" Stroke="Black" Width="85" Canvas.Top="77" Canvas.Left="194" MouseLeftButtonDown="b3_MouseLeftButtonDown"/>
+            <Rectangle x:Name="a2" Fill="#FF362525" Height="65" Stroke="Black" Width="85" Canvas.Left="98" MouseLeftButtonDown="a2_MouseLeftButtonDown" RenderTransformOrigin="0.5,0.498"/>
+            <Rectangle x:Name="c2" Fill="#FF362525" Height="65" Stroke="Black" Width="85" Canvas.Left="98" Canvas.Top="153" MouseLeftButtonDown="c2_MouseLeftButtonDown"/>
+            <Rectangle x:Name="b2" Fill="#FF362525" Height="65" Stroke="Black" Width="85" Canvas.Left="98" Canvas.Top="77" MouseLeftButtonDown="b2_MouseLeftButtonDown"/>
+
+        </Canvas>
+
+    </Grid>
+</Window>
