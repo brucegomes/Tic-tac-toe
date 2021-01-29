@@ -25,8 +25,20 @@
                 <MenuItem x:Name="menuAboutMe" Header="About" HorizontalAlignment="Left" Width="140" Click="menuAboutMe_Click"/>
             </MenuItem>
         </Menu>
-        <Button x:Name="resetBtn" Content="Reset" Margin="10,323,215,0" VerticalAlignment="Top" Background="#FFF0C5C5" FontWeight="Bold" Height="23" Click="resetBtn_Click" OpacityMask="#FFDE8585" RenderTransformOrigin="0.476,0.524"/>
-        <Button x:Name="tossBtn" Content="CoinToss" HorizontalAlignment="Left" Margin="10,293,0,0" VerticalAlignment="Top" Width="75" Background="#FFF1C1C1" FontWeight="Bold" Height="25" Click="tossBtn_Click"/>
+        <Button x:Name="resetBtn" Content="Reset" Margin="10,323,0,0" VerticalAlignment="Top" Background="#FFF0C5C5" FontWeight="Bold" Height="23" Click="resetBtn_Click" OpacityMask="#FFDE8585" RenderTransformOrigin="0.476,0.524" HorizontalAlignment="Left" Width="83">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="tossBtn" Content="CoinToss" HorizontalAlignment="Left" Margin="10,293,0,0" VerticalAlignment="Top" Width="83" Background="#FFF1C1C1" FontWeight="Bold" Height="25" Click="tossBtn_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
         <GroupBox x:Name="groupBox" Header="Playing Mode" HorizontalAlignment="Left" Height="65" Margin="114,284,0,0" VerticalAlignment="Top" Width="178" FontWeight="Bold" FontStyle="Italic">
             <Grid x:Name="groupBoxGrid" HorizontalAlignment="Left" Height="47" Margin="-6,1,-2,-5" VerticalAlignment="Top" Width="174">
                 <Grid.ColumnDefinitions>
@@ -42,23 +54,31 @@
             <Label.Effect>
                 <DropShadowEffect/>
             </Label.Effect>
+            <Label.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Label.Resources>
         </Label>
-        <Canvas x:Name="mainCanvas" HorizontalAlignment="Left" Height="218" Margin="10,61,0,0" VerticalAlignment="Top" Width="279" Background="#FFA64B4B">
-            <Rectangle x:Name="a1" Height="65" Stroke="Black" Width="85" MouseLeftButtonDown="a1_MouseLeftButtonDown">
-                <Rectangle.Fill>
-                    <SolidColorBrush Color="{DynamicResource Color1}"/>
-                </Rectangle.Fill>
-            </Rectangle>
-            <Rectangle x:Name="c1" Fill="#FF362525" Height="65" Stroke="Black" Width="85" Canvas.Top="153" MouseLeftButtonDown="c1_MouseLeftButtonDown"/>
-            <Rectangle x:Name="b1" Fill="#FF362525" Height="65" Stroke="Black" Width="85" Canvas.Top="77" MouseLeftButtonDown="b1_MouseLeftButtonDown"/>
-            <Rectangle x:Name="c3" Fill="#FF362525" Height="65" Stroke="Black" Width="85" Canvas.Left="194" Canvas.Top="153" MouseLeftButtonDown="c3_MouseLeftButtonDown"/>
-            <Rectangle x:Name="a3" Fill="#FF362525" Height="65" Stroke="Black" Width="85" Canvas.Left="194" MouseLeftButtonDown="a3_MouseLeftButtonDown"/>
-            <Rectangle x:Name="b3" Fill="#FF362525" Height="65" Stroke="Black" Width="85" Canvas.Top="77" Canvas.Left="194" MouseLeftButtonDown="b3_MouseLeftButtonDown"/>
-            <Rectangle x:Name="a2" Fill="#FF362525" Height="65" Stroke="Black" Width="85" Canvas.Left="98" MouseLeftButtonDown="a2_MouseLeftButtonDown" RenderTransformOrigin="0.5,0.498"/>
-            <Rectangle x:Name="c2" Fill="#FF362525" Height="65" Stroke="Black" Width="85" Canvas.Left="98" Canvas.Top="153" MouseLeftButtonDown="c2_MouseLeftButtonDown"/>
-            <Rectangle x:Name="b2" Fill="#FF362525" Height="65" Stroke="Black" Width="85" Canvas.Left="98" Canvas.Top="77" MouseLeftButtonDown="b2_MouseLeftButtonDown"/>
 
-        </Canvas>
+        <Border ClipToBounds="True" CornerRadius="6" Background="#FF362525" Name="brdEtikett" Height="218" Width="279" >
+            <Canvas x:Name="mainCanvas" HorizontalAlignment="Left" Height="218" Margin="0" VerticalAlignment="Top" Width="279" UseLayoutRounding="False">
+                <Rectangle x:Name="a1" Height="65" Stroke="Black" Width="85" MouseLeftButtonDown="a1_MouseLeftButtonDown" RadiusX="6" RadiusY="6" ClipToBounds="True">
+                    <Rectangle.Fill>
+                        <SolidColorBrush Color="#FFA64B4B"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <Rectangle x:Name="c1" Fill="#FFA64B4B" Height="65" Stroke="Black" Width="85" Canvas.Top="153" MouseLeftButtonDown="c1_MouseLeftButtonDown" RadiusX="6" RadiusY="6" ClipToBounds="True"/>
+                <Rectangle x:Name="b1" Fill="#FFA64B4B" Height="65" Stroke="Black" Width="85" Canvas.Top="77" MouseLeftButtonDown="b1_MouseLeftButtonDown" RadiusX="6" RadiusY="6" ClipToBounds="True"/>
+                <Rectangle x:Name="c3" Fill="#FFA64B4B" Height="65" Stroke="Black" Width="85" Canvas.Left="194" Canvas.Top="153" MouseLeftButtonDown="c3_MouseLeftButtonDown" RadiusX="6" RadiusY="6" ClipToBounds="True"/>
+                <Rectangle x:Name="a3" Fill="#FFA64B4B" Height="65" Stroke="Black" Width="85" Canvas.Left="194" MouseLeftButtonDown="a3_MouseLeftButtonDown" RadiusX="6" RadiusY="6" ClipToBounds="True"/>
+                <Rectangle x:Name="b3" Fill="#FFA64B4B" Height="65" Stroke="Black" Width="85" Canvas.Top="77" Canvas.Left="194" MouseLeftButtonDown="b3_MouseLeftButtonDown" RadiusX="6" RadiusY="6" ClipToBounds="True"/>
+                <Rectangle x:Name="a2" Fill="#FFA64B4B" Height="65" Stroke="Black" Width="85" Canvas.Left="98" MouseLeftButtonDown="a2_MouseLeftButtonDown" RenderTransformOrigin="0.5,0.498" RadiusX="6" RadiusY="6" ClipToBounds="True"/>
+                <Rectangle x:Name="c2" Fill="#FFA64B4B" Height="65" Stroke="Black" Width="85" Canvas.Left="98" Canvas.Top="153" MouseLeftButtonDown="c2_MouseLeftButtonDown" RadiusX="6" RadiusY="6" ClipToBounds="True"/>
+                <Rectangle x:Name="b2" Height="65" Stroke="Black" Width="85" Canvas.Left="98" Canvas.Top="77" MouseLeftButtonDown="b2_MouseLeftButtonDown" Fill="#FFA64B4B" RadiusX="6" RadiusY="6" ClipToBounds="True"/>
+
+            </Canvas>
+        </Border>
 
     </Grid>
 </Window>
