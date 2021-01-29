@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gomesbhw5", "gomesbhw5\gomesbhw5.csproj", "{33A7CB2D-1173-4573-85CA-11824C700594}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gomesbTictactoe", "gomesbhw5\gomesbTictactoe.csproj", "{33A7CB2D-1173-4573-85CA-11824C700594}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +18,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BFAF17A8-A383-4EFB-9684-3E51930A97B0}
 	EndGlobalSection
 EndGlobal
