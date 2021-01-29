@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Shapes;
 
-namespace gomesbhw5
+namespace gomesbTictactoe
 {
     internal class CpuTurn
     {

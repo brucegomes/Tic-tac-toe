@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace gomesbhw5.Properties
+namespace gomesbTictactoe.Properties
 {
 
 
