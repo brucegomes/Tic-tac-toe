@@ -25,21 +25,21 @@
                 <MenuItem x:Name="menuAboutMe" Header="About" HorizontalAlignment="Left" Width="140" Click="menuAboutMe_Click"/>
             </MenuItem>
         </Menu>
-        <Button x:Name="resetBtn" Content="Reset" Margin="10,323,0,0" VerticalAlignment="Top" Background="#FFF0C5C5" FontWeight="Bold" Height="23" Click="resetBtn_Click" OpacityMask="#FFDE8585" RenderTransformOrigin="0.476,0.524" HorizontalAlignment="Left" Width="83">
+        <Button x:Name="resetBtn" Content="Reset" Margin="10,331,0,0" VerticalAlignment="Top" Background="#FFF0C5C5" FontWeight="Bold" Height="23" Click="resetBtn_Click" OpacityMask="#FFDE8585" RenderTransformOrigin="0.476,0.524" HorizontalAlignment="Left" Width="83">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="5"/>
                 </Style>
             </Button.Resources>
         </Button>
-        <Button x:Name="tossBtn" Content="CoinToss" HorizontalAlignment="Left" Margin="10,293,0,0" VerticalAlignment="Top" Width="83" Background="#FFF1C1C1" FontWeight="Bold" Height="25" Click="tossBtn_Click">
+        <Button x:Name="tossBtn" Content="CoinToss" HorizontalAlignment="Left" Margin="10,301,0,0" VerticalAlignment="Top" Width="83" Background="#FFF1C1C1" FontWeight="Bold" Height="25" Click="tossBtn_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="5"/>
                 </Style>
             </Button.Resources>
         </Button>
-        <GroupBox x:Name="groupBox" Header="Playing Mode" HorizontalAlignment="Left" Height="65" Margin="114,284,0,0" VerticalAlignment="Top" Width="178" FontWeight="Bold" FontStyle="Italic">
+        <GroupBox x:Name="groupBox" Header="Playing Mode" HorizontalAlignment="Left" Height="65" Margin="111,291,0,0" VerticalAlignment="Top" Width="178" FontWeight="Bold" FontStyle="Italic" Grid.RowSpan="2">
             <Grid x:Name="groupBoxGrid" HorizontalAlignment="Left" Height="47" Margin="-6,1,-2,-5" VerticalAlignment="Top" Width="174">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="115*"/>
