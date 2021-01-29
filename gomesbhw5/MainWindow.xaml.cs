@@ -119,7 +119,7 @@ namespace gomesbTictactoe
         private void resetBtn_Click(object sender, RoutedEventArgs e)
         {
             // clear all
-            SolidColorBrush brushDefault = (SolidColorBrush)(new BrushConverter().ConvertFrom("#FF362525"));
+            SolidColorBrush brushDefault = (SolidColorBrush)(new BrushConverter().ConvertFrom("#FFA64B4B"));
             a1.Resources.Clear();
             a2.Resources.Clear();
             a3.Resources.Clear();
