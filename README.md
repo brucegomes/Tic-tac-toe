@@ -1,8 +1,8 @@
 # Tic-tac-toe in C#
 
-- This is a simple tic-tac-toe game with the sole purpose to practice C#. 
-
-You can play it against a second player on the same computer, or play against the CPU.
+- "In Progress..."
+- This is a simple tic-tac-toe game with the sole purpose to practice C#.  
+- You can play it against a second player on the same computer, or play against the CPU.
 
 * How to play
 
