@@ -95,9 +95,7 @@ namespace gomesbTictactoe
             {
                 winLogic(m.a3);
             }
-
-            // Draw Condition
-            else
+            else // Draw Condition
             {
                 // all disabled = draw
                 if(m.a1.IsEnabled == false && m.a2.IsEnabled == false && m.a3.IsEnabled == false &&
