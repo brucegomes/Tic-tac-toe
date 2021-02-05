@@ -14,6 +14,9 @@ namespace gomesbTictactoe
 
         public void winLogic(Rectangle x)
         {
+            if (x.Fill is System.Windows.Media.SolidColorBrush)
+                return;
+
             if (x.Fill == m.cross)
             {
                 if (m.cpuMode)

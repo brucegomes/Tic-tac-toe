@@ -234,11 +234,10 @@ namespace gomesbTictactoe
                 }
             }
             x.IsEnabled = false;
-            if (this.firstPlay != true)
-            {
+            if (firstPlay != true)
                 chkVictory.check();
-                firstPlay = false;
-            }
+
+            firstPlay = false;
         }
 
         private void menuExit_Click(object sender, RoutedEventArgs e)
