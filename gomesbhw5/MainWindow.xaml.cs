@@ -63,19 +63,18 @@ namespace gomesbTictactoe
             this.circle = new ImageBrush();
             circle.ImageSource = new BitmapImage(new Uri(@"circle.png", UriKind.Relative));
             this.cross = new ImageBrush();
-            cross.ImageSource = new BitmapImage(new Uri(@"x.jpg", UriKind.Relative));
+            cross.ImageSource = new BitmapImage(new Uri(@"x.png", UriKind.Relative));
 
             randomGen = new Random();
             cpuTurn = new CpuTurn(this);
             chkVictory = new CheckVictory(this);
         }
 
-
         private void a1_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            playLogic(a1);
-            
+            playLogic(a1);            
         }
+
         private void a2_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             playLogic(a2);
@@ -158,11 +157,12 @@ namespace gomesbTictactoe
         private void cpuRadioBtn_Checked(object sender, RoutedEventArgs e)
         {
             this.cpuMode = true;
+            this.humanRadioBtn.IsChecked = false;            
         }
 
         private void tossBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            toggleRects(true);
             int turn = randomGen.Next(1, 3);
             if (this.cpuMode == true)
             {
@@ -188,8 +188,7 @@ namespace gomesbTictactoe
                     this.playerTurn = 2;
                 }
             }
-
-            toggleRects(true);
+            
             tossBtn.IsEnabled = false;
             menuToss.IsEnabled = false;
             resetBtn.IsEnabled = true;
@@ -212,9 +211,10 @@ namespace gomesbTictactoe
 
         public void playLogic(Rectangle x)
         {
+            x.IsEnabled = false;
             if (cpuMode)
             {
-                x.Fill = cross;
+                x.Fill = cross;                
                 cpuTurn.play();
                 statusLabel.Content = "Player's Turn";
             }
@@ -232,8 +232,7 @@ namespace gomesbTictactoe
                     playerTurn = 1;
                     statusLabel.Content = "Player 1 Turn";
                 }
-            }
-            x.IsEnabled = false;
+             }            
             if (firstPlay != true)
                 chkVictory.check();
 

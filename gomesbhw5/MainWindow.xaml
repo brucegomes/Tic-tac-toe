@@ -50,16 +50,25 @@
                 <RadioButton x:Name="cpuRadioBtn" Content="Against CPU" HorizontalAlignment="Left" Margin="80,13,0,0" VerticalAlignment="Top" FontWeight="Bold" Grid.ColumnSpan="3" Checked="cpuRadioBtn_Checked" Width="91"/>
             </Grid>
         </GroupBox>
-        <Label x:Name="statusLabel" Content="Welcome -- Toss a coin to start" Height="27" Margin="10,24,0,0" VerticalAlignment="Top" Width="279" FontSize="17" FontFamily="Viner Hand ITC" FontStyle="Italic" Foreground="#FFE01919" Background="#FFEEB4B4" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" HorizontalAlignment="Left" FontWeight="Bold">
-            <Label.Effect>
-                <DropShadowEffect/>
-            </Label.Effect>
-            <Label.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="5"/>
-                </Style>
-            </Label.Resources>
-        </Label>
+        <Viewbox Height="27" Margin="10,24,0,0" VerticalAlignment="Top" Width="279" HorizontalAlignment="Left" Stretch="Fill">
+            <DockPanel Height="27" Width="279">
+                <Label x:Name="statusLabel" Content="Welcome -- Toss a coin to start" FontFamily="Perpetua Titling MT" FontStyle="Italic" Background="#FFEEB4B4" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" FontWeight="Bold" Width="279" FontSize="13.5">
+                    <Label.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Label.Resources>
+                    <Label.Foreground>
+                        <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlTextColorKey}}"/>
+                    </Label.Foreground>
+                    <Label.Effect>
+                        <DropShadowEffect/>
+                    </Label.Effect>
+                </Label>
+
+            </DockPanel>
+
+        </Viewbox>
 
         <Border ClipToBounds="True" CornerRadius="6" Background="#FF362525" Name="brdEtikett" Height="218" Width="279" >
             <Canvas x:Name="mainCanvas" HorizontalAlignment="Left" Height="218" Margin="0" VerticalAlignment="Top" Width="279" UseLayoutRounding="False">

@@ -39,11 +39,13 @@ namespace gomesbTictactoe
             {
                 choice = randomGen.Next(9);
                 if(myRects[choice].IsEnabled == true)
-                {
+                {                    
                     myRects[choice].Fill = m.circle;
+                    myRects[choice].IsEnabled = false;
                     m.statusLabel.Content = "Your Turn";
                     played = true;
                 }
+                Console.WriteLine(choice);
             }
         }
     }
