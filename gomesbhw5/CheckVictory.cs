@@ -17,14 +17,13 @@ namespace gomesbTictactoe
             if (x.Fill is System.Windows.Media.SolidColorBrush)
                 return;
 
-            if (x.Fill == m.cross)
+            if (x.Fill == m.circle)
             {
                 if (m.cpuMode)
                 {
-                    m.winner = "YOU WIN!!!";
+                    m.winner = "CPU WIN!!!";
                     m.statusLabel.Content = m.winner;
                     m.toggleRects(false);
-
                 }
                 else
                 {
@@ -37,10 +36,9 @@ namespace gomesbTictactoe
             {
                 if (m.cpuMode)
                 {
-                    m.winner = "CPU WIN!!!";
+                    m.winner = "YOU WIN!!!";
                     m.statusLabel.Content = m.winner;
                     m.toggleRects(false);
-
                 }
                 else
                 {
@@ -68,7 +66,7 @@ namespace gomesbTictactoe
             //Winning Condition For Third Row   
             else if (m.c1.Fill == m.c2.Fill && m.c2.Fill == m.c3.Fill)
             {
-                   winLogic(m.c1);
+                winLogic(m.c1);
             }
 
             //Winning Condition For First Column       

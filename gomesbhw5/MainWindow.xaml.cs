@@ -214,9 +214,20 @@ namespace gomesbTictactoe
             x.IsEnabled = false;
             if (cpuMode)
             {
-                x.Fill = cross;                
-                cpuTurn.play();
-                statusLabel.Content = "Player's Turn";
+                x.Fill = cross;
+                var timer = new System.Windows.Threading.DispatcherTimer();
+                timer.Tick += delegate
+                {
+                    cpuTurn.play();
+                    timer.Stop();
+                    if (firstPlay != true)
+                        chkVictory.check();
+                };
+
+                timer.Interval = TimeSpan.FromMilliseconds(1000);
+                timer.Start();
+
+                statusLabel.Content = "CPU's Turn";
             }
             else
             {

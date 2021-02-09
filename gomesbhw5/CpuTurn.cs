@@ -18,8 +18,7 @@ namespace gomesbTictactoe
         }
 
         private void fillRectArray()
-        {
-            
+        {            
             myRects[0] = m.a1;
             myRects[1] = m.a2;
             myRects[2] = m.a3;
@@ -46,6 +45,16 @@ namespace gomesbTictactoe
                     played = true;
                 }
                 Console.WriteLine(choice);
+
+                // check for all tiles played 
+                bool allTilesPlayed = true;
+                foreach (Rectangle rect in myRects)
+                {
+                    if (rect.IsEnabled == true)
+                        allTilesPlayed = false;
+                }
+                if (allTilesPlayed)
+                    break;
             }
         }
     }
