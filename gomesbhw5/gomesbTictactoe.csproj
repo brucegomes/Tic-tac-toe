@@ -98,7 +98,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="esquare.PNG" />
+    <Resource Include="Images\esquare.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\circle.png" />
+    <Resource Include="Images\x.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

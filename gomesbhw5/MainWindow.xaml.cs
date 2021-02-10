@@ -61,9 +61,9 @@ namespace gomesbTictactoe
         private void initializeBrushes()
         {
             this.circle = new ImageBrush();
-            circle.ImageSource = new BitmapImage(new Uri(@"circle.png", UriKind.Relative));
+            circle.ImageSource = new BitmapImage(new Uri(@"../../Images/circle.png", UriKind.Relative));
             this.cross = new ImageBrush();
-            cross.ImageSource = new BitmapImage(new Uri(@"x.png", UriKind.Relative));
+            cross.ImageSource = new BitmapImage(new Uri(@"../../Images/x.png", UriKind.Relative));
 
             randomGen = new Random();
             cpuTurn = new CpuTurn(this);

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:gomesbTictactoe"
         mc:Ignorable="d"
-        Title="My C# Tic-tac-toe" Height="401.287" Width="314.394" ResizeMode="NoResize" Background="#FFEE2323" Cursor="Pen" Icon="esquare.PNG">
+        Title="My C# Tic-tac-toe" Height="401.287" Width="314.394" ResizeMode="NoResize" Background="#FFEE2323" Cursor="Pen" Icon="Images/esquare.PNG">
     <Window.Resources>
         <Color x:Key="Color1">#FF362525</Color>
     </Window.Resources>
