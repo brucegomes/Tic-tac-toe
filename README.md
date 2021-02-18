@@ -1,6 +1,6 @@
 # Tic-tac-toe in C#
 
-- This is a simple tic-tac-toe game with the sole purpose to practice C#.  
+- This is a simple tic-tac-toe game with the sole purpose to practice C# and learn about WinForms.  
 - You can play it against a second player on the same computer, or play against the CPU.
 
 * How to play
